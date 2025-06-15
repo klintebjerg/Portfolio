@@ -1,20 +1,33 @@
-/* Reset some basic elements */
+
+
+:root{
+  --primary-color: #4b5563;
+}
+  
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inherit;
+  color: #4b5563; 
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Outfit';
   line-height: 1.6;
-  color: #333;
+  color: #4b5563; 
+}
+
+html {
+  scroll-behavior: smooth;
+  color: #4b5563; 
 }
 
 a {
-  color: inherit;
+  color: #4b5563; ;
   text-decoration: none;
 }
 
-/* Add your global styles here */
+

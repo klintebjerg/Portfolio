@@ -13,6 +13,7 @@ type HydrationStrategies = {
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
       'AboutMe': typeof import("../components/AboutMe.vue")['default']
+    'HeroIntro': typeof import("../components/HeroIntro.vue")['default']
     'ProfileCard': typeof import("../components/ProfileCard.vue")['default']
     'ProjectCard': typeof import("../components/ProjectCard.vue")['default']
     'ProjectList': typeof import("../components/ProjectList.vue")['default']
@@ -41,6 +42,7 @@ interface _GlobalComponents {
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyAboutMe': LazyComponent<typeof import("../components/AboutMe.vue")['default']>
+    'LazyHeroIntro': LazyComponent<typeof import("../components/HeroIntro.vue")['default']>
     'LazyProfileCard': LazyComponent<typeof import("../components/ProfileCard.vue")['default']>
     'LazyProjectCard': LazyComponent<typeof import("../components/ProjectCard.vue")['default']>
     'LazyProjectList': LazyComponent<typeof import("../components/ProjectList.vue")['default']>
@@ -75,6 +77,7 @@ declare module 'vue' {
 }
 
 export const AboutMe: typeof import("../components/AboutMe.vue")['default']
+export const HeroIntro: typeof import("../components/HeroIntro.vue")['default']
 export const ProfileCard: typeof import("../components/ProfileCard.vue")['default']
 export const ProjectCard: typeof import("../components/ProjectCard.vue")['default']
 export const ProjectList: typeof import("../components/ProjectList.vue")['default']
@@ -103,6 +106,7 @@ export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyAboutMe: LazyComponent<typeof import("../components/AboutMe.vue")['default']>
+export const LazyHeroIntro: LazyComponent<typeof import("../components/HeroIntro.vue")['default']>
 export const LazyProfileCard: LazyComponent<typeof import("../components/ProfileCard.vue")['default']>
 export const LazyProjectCard: LazyComponent<typeof import("../components/ProjectCard.vue")['default']>
 export const LazyProjectList: LazyComponent<typeof import("../components/ProjectList.vue")['default']>

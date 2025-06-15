@@ -13,7 +13,7 @@
       target="_blank"
       class="github-link"
     >
-      View on GitHub
+      GitHub
     </a>
   </div>
 </template>

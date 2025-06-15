@@ -1,10 +1,18 @@
 <template>
-  <div class="page-container">
-    <div class="content-wrapper">
+  <div class="page-container scroll-smooth">
+    
+    <HeroIntro />
+
+    <div id="content" class="content-wrapper">
       <div class="layout">
         <div class="profile-section">
-          <ProfileCard @next="nextPage" @prev="prevPage" @play="resetToProjects" :currentPage="currentPage" />
+          <ProfileCard 
+          @next="nextPage" 
+          @prev="prevPage" 
+          @play="resetToProjects" :currentPage="currentPage" />
         </div>
+
+
         <div class="main-content">
           <transition :name="transitionName" mode="out-in">
             <component :is="currentPage === 'projects' ? ProjectList : AboutMe" :key="currentPage"></component>
@@ -17,6 +25,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import HeroIntro from '../components/HeroIntro.vue'
 import ProfileCard from '~/components/ProfileCard.vue'
 import ProjectList from '~/components/ProjectList.vue'
 import AboutMe from '~/components/AboutMe.vue'
