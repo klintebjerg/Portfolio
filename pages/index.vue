@@ -7,14 +7,14 @@
       <div class="layout">
         <div class="profile-section">
           <ProfileCard 
-          @next="nextPage" 
           @prev="prevPage" 
+          @next="nextPage"
           @play="resetToProjects" :currentPage="currentPage" />
         </div>
 
 
         <div class="main-content">
-          <transition :name="transitionName" mode="out-in">
+          <transition :name="transitionName" mode="default">
             <component :is="currentPage === 'projects' ? ProjectList : AboutMe" :key="currentPage"></component>
           </transition>
         </div>
@@ -66,9 +66,10 @@ const resetToProjects = () => {
 
 .content-wrapper {
   max-width: 1024px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0 16px;
-  padding-top: 64px;
+  padding-top: 42px;
 }
 
 .layout {
@@ -86,7 +87,10 @@ const resetToProjects = () => {
 }
 
 .main-content {
+  position: relative;
   width: 100%;
+  min-height: 768px;
+  overflow: hidden;
 }
 
 /* Responsive layout */
@@ -109,52 +113,55 @@ const resetToProjects = () => {
   }
 }
 
-/* Transition effects */
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: all 0.3s ease;
-}
-
-.slide-fade-enter-from {
-  transform: translateX(20px);
-  opacity: 0;
-}
-
-.slide-fade-leave-to {
-  transform: translateX(-20px);
-  opacity: 0;
-}
-
-/* Updated Transition effects for both directions */
-/* Left direction (for next button) */
+/* Base for all transitions */
 .slide-left-enter-active,
-.slide-left-leave-active {
-  transition: all 0.3s ease;
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  position: absolute;
+  width: 100%;
 }
 
+/* Slide LEFT (next page) */
 .slide-left-enter-from {
-  transform: translateX(20px);
+  transform: translateX(100%);
   opacity: 0;
+}
+
+.slide-left-enter-to {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-left-leave-from {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .slide-left-leave-to {
-  transform: translateX(-20px);
+  transform: translateX(-100%);
   opacity: 0;
 }
 
-/* Right direction (for prev button) */
-.slide-right-enter-active,
-.slide-right-leave-active {
-  transition: all 0.3s ease;
-}
-
+/* Slide RIGHT (prev page) */
 .slide-right-enter-from {
-  transform: translateX(-20px);
+  transform: translateX(-100%);
   opacity: 0;
+}
+
+.slide-right-enter-to {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-right-leave-from {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .slide-right-leave-to {
-  transform: translateX(20px);
+  transform: translateX(100%);
   opacity: 0;
 }
 </style>
