@@ -27,7 +27,7 @@ const handleFastForward = () => {
   <div class="profile-card">
     <!-- Profile image -->
     <div class="profile-image-container">
-      <img src="/images/profile.png" alt="Mathias K. Phillip" class="profile-image">
+      <img src="/images/portfolio.jpeg" alt="Mathias K. Phillip" class="profile-image">
     </div>
 
     <!-- Text -->

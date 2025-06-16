@@ -3,7 +3,7 @@
     <ProjectCard 
       title="World of Poaching" 
       github="https://github.com/Nico170f/world-of-zuul" 
-      image="world-of-poaching.jpg" 
+      image="world-of-poaching.png" 
     />
     <ProjectCard 
       title="DAM system" 
@@ -13,7 +13,7 @@
     <ProjectCard 
       title="Barspil" 
       github="https://github.com/Nico170f/barspil"
-      image="barspil.jpg"
+      image="barspil.png"
     />
   </div>
 </template>
