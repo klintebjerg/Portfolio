@@ -32,9 +32,7 @@ const handleFastForward = () => {
 
     <!-- Text -->
     <p class="profile-title">Mathias K. Phillip</p>
-    <p class="profile-occupation">Software Ingeniør</p>
-    <p class="profile-addons">Syddansk Universitet</p>
-    <p class="profile-page-indicator">{{ currentPage === 'projects' ? 'Projekter' : 'Om Mig' }}</p>
+    <p class="profile-page-indicator">{{ currentPage === 'projects' ? 'Projects' : 'About Me' }}</p>
 
     <!-- Controls -->
     <div class="controls">
@@ -102,7 +100,8 @@ const handleFastForward = () => {
 .profile-page-indicator {
   margin-top: 0.5rem;
   font-size: 0.875rem;
-  text-decoration: underline;
+  font-weight: 500;
+  color: #4b5563;
 }
 
 .controls {

@@ -61,6 +61,7 @@ defineProps({
 
 .github-link {
   font-size: 0.875rem;
+  width: fit-content;
   color: #2563eb; /* text-blue-600 */
   text-decoration: none;
 }
