@@ -33,7 +33,7 @@
 <style scoped>
 .about-me {
   background-color: white;
-  color: black;
+  color: #0f0f0f;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);

@@ -17,6 +17,7 @@ interface _GlobalComponents {
     'ProfileCard': typeof import("../components/ProfileCard.vue")['default']
     'ProjectCard': typeof import("../components/ProjectCard.vue")['default']
     'ProjectList': typeof import("../components/ProjectList.vue")['default']
+    'SectionIndicator': typeof import("../components/SectionIndicator.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -46,6 +47,7 @@ interface _GlobalComponents {
     'LazyProfileCard': LazyComponent<typeof import("../components/ProfileCard.vue")['default']>
     'LazyProjectCard': LazyComponent<typeof import("../components/ProjectCard.vue")['default']>
     'LazyProjectList': LazyComponent<typeof import("../components/ProjectList.vue")['default']>
+    'LazySectionIndicator': LazyComponent<typeof import("../components/SectionIndicator.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -81,6 +83,7 @@ export const HeroIntro: typeof import("../components/HeroIntro.vue")['default']
 export const ProfileCard: typeof import("../components/ProfileCard.vue")['default']
 export const ProjectCard: typeof import("../components/ProjectCard.vue")['default']
 export const ProjectList: typeof import("../components/ProjectList.vue")['default']
+export const SectionIndicator: typeof import("../components/SectionIndicator.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -110,6 +113,7 @@ export const LazyHeroIntro: LazyComponent<typeof import("../components/HeroIntro
 export const LazyProfileCard: LazyComponent<typeof import("../components/ProfileCard.vue")['default']>
 export const LazyProjectCard: LazyComponent<typeof import("../components/ProjectCard.vue")['default']>
 export const LazyProjectList: LazyComponent<typeof import("../components/ProjectList.vue")['default']>
+export const LazySectionIndicator: LazyComponent<typeof import("../components/SectionIndicator.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

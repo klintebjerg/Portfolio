@@ -11,14 +11,19 @@
           @next="nextPage"
           @play="resetToProjects" :currentPage="currentPage" />
         </div>
-
-
         <div class="main-content">
           <transition :name="transitionName" mode="default">
             <component :is="currentPage === 'projects' ? ProjectList : AboutMe" :key="currentPage"></component>
           </transition>
         </div>
       </div>
+      <SectionIndicator
+        :current="currentPage"
+        :sections="[
+          { id: 'projects', label: 'Projects', icon: 'folder' },
+          { id: 'about', label: 'About Me', icon: 'person' }
+        ]"
+        @update:current="jumpToPage" />
     </div>
   </div>
 </template>
@@ -29,6 +34,14 @@ import HeroIntro from '../components/HeroIntro.vue'
 import ProfileCard from '~/components/ProfileCard.vue'
 import ProjectList from '~/components/ProjectList.vue'
 import AboutMe from '~/components/AboutMe.vue'
+import SectionIndicator from '../components/SectionIndicator.vue'
+
+const jumpToPage = (id) => {
+  if (id === currentPage.value) return
+  transitionName.value = id === 'projects' ? 'slide-right' : 'slide-left'
+  currentPage.value = id
+}
+
 
 // Track the current page
 const currentPage = ref('projects')
@@ -60,7 +73,7 @@ const resetToProjects = () => {
 /* Main layout styling */
 .page-container {
   min-height: 100vh;
-  background-color: black;
+  background-color: #131313;
   color: white;
 }
 
@@ -120,7 +133,9 @@ const resetToProjects = () => {
 .slide-right-leave-active {
   transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   position: absolute;
+  border-radius: 0.5rem;
   width: 100%;
+  
 }
 
 /* Slide LEFT (next page) */
