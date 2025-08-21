@@ -3,10 +3,7 @@
     <h2 class="about-heading">Hej - Jeg hedder Mathias</h2>
     <p class="about-paragraph">
       Jeg læser Softwareingeniør på SDU og har en stor interesse for alt, der handler om IT. Jeg kan godt lide at forstå, hvordan ting hænger sammen – og jeg synes det er fedt, når kode ikke bare virker, men giver mening.
-    </p>
-    <p class="about-paragraph">
-      Jeg arbejder gerne med det hele - frontend, backend og fullstack, men der hvor jeg har min kærlighed er backend. Logisk at kunne se, det dine metoder skal returnere, er det de faktisk gør. Det giver mig mere glæde, end at se på noget flot. Jeg er ikke bleg for at udfordre mig selv og det er derfor I ser på denne portfolio. Jeg kunne ikke, men jeg valgte at gøre det.
-    </p>
+    </p> 
     <p class="about-paragraph">
       Når jeg ikke sidder med et projekt, laver jeg sport – meget sport. Det er min måde at koble af på og holde energien oppe, og jeg tror på, at balance mellem hoved og krop gør mig bedre til begge dele.        
     </p>
@@ -33,7 +30,7 @@
 <style scoped>
 .about-me {
   background-color: white;
-  color: #0f0f0f;
+  color: black;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);

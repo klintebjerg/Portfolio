@@ -3,15 +3,26 @@
     <div class="content">
       <p class="tagline">I build things.</p>    
       <h1 class="name"><span class="highlight">Mathias Klintebjerg Phillip</span></h1>
-      <p class="subtext">I am a software engineer and code a little bit.</p>
+      <p class="subtext">Software Ingeniør</p>
     </div>
 
-    <a href="#content" class="scroll-button">
+
+
+    <a class="scroll-button" @click="scrollDown">
       <span class="material-symbols-rounded">arrow_drop_down</span>
-    </a>
+      </a>
   </section>
 </template>
 
+
+<script setup>
+function scrollDown() {
+  const content = document.getElementById('content');
+  if (content) {
+    content.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
 
 <style scoped>
 .page {
@@ -35,13 +46,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.scroll-button {
-  margin-top: auto;
-  padding-bottom: 1.5rem;
-  color: var(--text-color);
-  animation: floatDown 2s infinite ease-in-out;
 }
 
 @keyframes floatDown {
@@ -89,4 +93,17 @@
   color: var(--text-color);
 }
 
+.scroll-button {
+  cursor: pointer;
+}
+
+.scroll-button:hover {
+  animation: float 1s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(3px); } 
+  100% { transform: translateY(0); }    
+}
 </style>
