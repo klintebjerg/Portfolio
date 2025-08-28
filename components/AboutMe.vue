@@ -29,7 +29,7 @@
 
 <style scoped>
 .about-me {
-  background-color: white;
+  background-color: #dddddd;
   color: black;
   padding: 1.5rem;
   border-radius: 1rem;

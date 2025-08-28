@@ -16,6 +16,11 @@
       github="https://github.com/Nico170f/barspil"
       image="barspil.png"
     />
+     <ProjectCard 
+      title="Portfolio" 
+      github="https://github.com/klintebjerg/Portfolio"
+      image="portfolio.png"
+    />
     </div>
   </div>
 </template>

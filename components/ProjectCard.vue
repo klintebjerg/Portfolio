@@ -28,15 +28,15 @@ defineProps({
 
 <style scoped>
 .project-card {
-  background-color: white;
+  background-color: #dddddd;
   color: black;
-  border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  border-radius: 1rem;
 }
 
 .project-image-container {

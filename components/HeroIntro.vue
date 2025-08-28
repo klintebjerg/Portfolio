@@ -3,7 +3,7 @@
     <div class="content">
       <p class="tagline">I build things.</p>    
       <h1 class="name"><span class="highlight">Mathias Klintebjerg Phillip</span></h1>
-      <p class="subtext">Software Ingeniør</p>
+      <p class="subtext">Software Engineer</p>
     </div>
 
 

@@ -54,7 +54,7 @@ const handleFastForward = () => {
 
 <style scoped>
 .profile-card {
-  background-color: white;
+  background-color: #dddddd;
   color: black;
   width: 12rem; /* w-48 */
   padding: 1rem;
